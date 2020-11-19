@@ -1,0 +1,49 @@
+{
+  "name": "chinese-poetries-english-translation-json",
+  "version": "1.0.0",
+  "description": "English translation for some of Chinese poetries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "build": "node scripts/chinese-poems.com.js",
+    "lint": "eslint .",
+    "d-ts-lint": "tsc index.d.ts",
+    "coverage": "nyc mocha -b -R spec",
+    "ci": "npm run lint && npm run d-ts-lint && npm run coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BoogeeDoo/chinese-poetries-english-translation-json.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BoogeeDoo/chinese-poetries-english-translation-json/issues"
+  },
+  "homepage": "https://github.com/BoogeeDoo/chinese-poetries-english-translation-json",
+  "keywords": [
+    "chinese poetry",
+    "chinese poem"
+  ],
+  "files": [
+    "poetries",
+    "index.js",
+    "index.d.ts"
+  ],
+  "author": "XadillaX <i@2333.moe>",
+  "license": "MIT",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "eslint": "^7.13.0",
+    "eslint-config-egg": "^9.0.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "scarlet-task": "^1.1.0",
+    "spidex": "^2.2.1",
+    "typescript": "^4.0.5"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ]
+  }
+}
